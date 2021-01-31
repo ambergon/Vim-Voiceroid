@@ -1,14 +1,9 @@
 "無効化処理
-""vimrc側に記述
 "g:loaded_A_Vim_Voiceroid = 1
 "
 "if exists('g:loaded_A_Vim_Voiceroid')
 "   finish
 "endif
-"
-"talk_path
-"tag = >
-"A_Vim_who
 
 ""settings
 ""民安talk vrx.exeのpath
