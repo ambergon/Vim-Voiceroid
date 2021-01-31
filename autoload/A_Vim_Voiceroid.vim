@@ -5,6 +5,6 @@ function! A_Vim_Voiceroid#voiceroid(...) abort
         "textの無毒化
         let l:text = l:text . getline( n ) . g:A_Vim_Separater
     endfor
-    call system(tamiyasu_talk_path . ' ' . l:text)
+    call system(g:tamiyasu_talk_path . ' "' . l:text . '"')
 endfunction
         
