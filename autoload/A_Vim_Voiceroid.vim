@@ -1,4 +1,3 @@
-let g:tamiyasu_talk_path = "path"
 
 function! A_Vim_Voiceroid#voiceroid(...) abort
     " echo a:0
@@ -7,7 +6,7 @@ function! A_Vim_Voiceroid#voiceroid(...) abort
     " echo getline( 1 )
     let l:text =''
     for n in range(a:1 , a:2)
-        let l:text = l:text . getline( n )
+        let l:text = l:text . getline( n ) . g:A_Vim_Separater
 
     endfor
     echo l:text
