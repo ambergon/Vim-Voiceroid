@@ -20,6 +20,7 @@ function! A_Vim_Voiceroid#yukkurisave(...) abort
         elseif =~ "^yaranaio:.*"
             call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:SofTalk_PATH . '\voice\' . n  .  '.wav' . ' /W:' . getline(n) )
         else
+            echo "skip:" . line(n) 
         endif
     endfor
 endfunction
