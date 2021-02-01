@@ -8,15 +8,15 @@
 ""settings
 ""VOICEROID
 ""民安talk vrx.exeのpath
-"let g:tamiyasu_talk_PATH = 'path' . '\vrx.exe'
+"let g:tamiyasu_talk_PATH = 'path'
 "Voiceroid側の文字列の区切り
 "let g:A_Vim_Separater = '/'
 
 ""YUKKURI
 ""SofTalkのPATH
-"let g:SofTalk_PATH = 'path' . '\SofTalk.exe'
+"let g:SofTalk_PATH = 'path'
 ""保存するPATH
-"let g:SofTalk_SAVE_PATH = 'path' . '\voice\'
+"let g:SofTalk_SAVE_PATH = 'path'
 
 command! -range Avoiceroid call A_Vim_Voiceroid#voiceroid(<line1>,<line2>)
 
