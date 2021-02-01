@@ -22,7 +22,7 @@ command! -range Avoiceroid call A_Vim_Voiceroid#voiceroid(<line1>,<line2>)
 
 command! Ayukkuri call A_Vim_Voiceroid#yukkuri()
 
-command! -range AyukkuriSave call A_Vim_Voiceroid#yukkuri_save(<line1>,<line2>)
+command! -range AyukkuriSave call A_Vim_Voiceroid#yukkurisave(<line1>,<line2>)
 
 
 

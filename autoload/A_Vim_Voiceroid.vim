@@ -12,9 +12,9 @@ function! A_Vim_Voiceroid#yukkuri(...) abort
     call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /W:' . getline( '.' ) )
 endfunction
 
-function! A_Vim_Voiceroid#yukkuri_save(...) abort
+function! A_Vim_Voiceroid#yukkurisave(...) abort
     let l:text =''
     for n in range(a:1 , a:2)
-        call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . SofTalk_PATH . '\voice\' . getline( n ) . '.wav' . ' /W: 'getline( n ) )
+        call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . SofTalk_PATH . '\voice\' . getline( n ) . '.wav' . ' /W:' . getline( n ) )
     endfor
 endfunction
