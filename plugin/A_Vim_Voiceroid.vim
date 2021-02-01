@@ -15,8 +15,6 @@
 ""YUKKURI
 ""SofTalkのPATH
 "let g:SofTalk_PATH = 'path'
-""保存するPATH
-"let g:SofTalk_SAVE_PATH = 'path'
 
 command! -range Avoiceroid call A_Vim_Voiceroid#voiceroid(<line1>,<line2>)
 
