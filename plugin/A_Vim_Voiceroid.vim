@@ -15,6 +15,8 @@
 ""YUKKURI
 ""SofTalkのPATH
 "let g:SofTalk_PATH = 'path'
+"let g:kansikun_PATH = 'path'
+"
 
 command! -range Avoiceroid call A_Vim_Voiceroid#voiceroid(<line1>,<line2>)
 

@@ -16,11 +16,11 @@ function! A_Vim_Voiceroid#yukkurisave(...) abort
     for n in range(a:1 , a:2)
         let l:text = getline( n )
         if l:text =~ "^yaruo:.*"
-            call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:SofTalk_PATH . '\voice\' . n  .  '.wav' . ' /W:' . getline(n) )
+            call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:kansikun_PATH . '\tmp\' . n  .  '.wav' . ' /W:' . getline(n) )
         elseif l:text =~ "^yaranaio:.*"
-            call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:SofTalk_PATH . '\voice\' . n  .  '.wav' . ' /W:' . getline(n) )
+            call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:kansikun_PATH . '\tmp\' . n  .  '.wav' . ' /W:' . getline(n) )
         else
-            echo "skip:" . getline(n) . '行'
+            echo "skip:" . getline(n)
         endif
     endfor
 endfunction
