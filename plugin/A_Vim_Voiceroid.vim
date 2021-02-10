@@ -7,10 +7,13 @@
 
 ""settings
 ""VOICEROID
-""民安talk vrx.exeのpath
-"let g:tamiyasu_talk_PATH = 'path'
+""民安talk vrx.exeのdirectory
+"let g:tamiyasu_talk_PATH = 'directory'
+"起動したいソフト
+"let g:tamiyasu_talk_EXE = 'vrx.exe'
 "Voiceroid側の文字列の区切り
-"let g:A_Vim_Separater = '/'
+"let g:A_Voiceroid_Separater = '!LF!'
+"let g:A_Voiceroid_Separater = '/'
 
 ""YUKKURI
 ""SofTalkのPATH
