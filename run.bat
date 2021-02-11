@@ -13,3 +13,4 @@ SET LF=^
 SET x=%*
 START %~dp0vrx.exe !x!
 
+ENDLOCAL
