@@ -17,7 +17,7 @@ function! A_Vim_Voiceroid#yukkurisave(...) abort
         let l:text = getline( n )
         if l:text =~ "^yaruo:.*"
             call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:kansikun_PATH . '\tmp\Yukkuri_' . n  .  '.wav' . ' /W:' . getline(n) )
-        elseif l:text =~ "^yaranaio:.*"
+        elseif l:text =~ "^yara:.*"
             call system(g:SofTalk_PATH . '\SofTalk.exe' . ' /R:' . g:kansikun_PATH . '\tmp\Yukkuri_' . n  .  '.wav' . ' /W:' . getline(n) )
         else
             echo "skip:" . getline(n)
