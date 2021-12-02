@@ -7,10 +7,12 @@
 function! VimVoiceroid#voiceroid(...) abort
     let l:text =''
     for n in range(a:1 , a:2)
-        let l:text = l:text . getline( n ) . g:A_Voiceroid_Separater
+        let l:text =  l:text . getline( n ) . g:A_Voiceroid_Separater
     endfor
-    call system(g:tamiyasu_talk_PATH . '\' . g:tamiyasu_talk_EXE . ' ' . l:text )
+    "let l:anko = eval( system(g:tamiyasu_talk_PATH . '\' . g:tamiyasu_talk_EXE . ' ' . l:text ))
     "call system(g:tamiyasu_talk_PATH . '\vrx.exe' . ' ' . l:text . '')
+    call system(g:tamiyasu_talk_PATH . '\' . g:tamiyasu_talk_EXE . ' ' . l:text )
+    "system(g:tamiyasu_talk_PATH . '\vrx.exe' . ' ' . l:text . '')
 endfunction
         
 
