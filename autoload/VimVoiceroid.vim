@@ -1,22 +1,17 @@
 
 
 
-let g:tamiyasu_talk_EXE = 'run.bat'
-let g:A_Voiceroid_Separater = '!LF!'
-
 ""settings
+let g:tamiyasu_talk_EXE = 'run.bat'
+let g:VimVoiceroidSep = '!LF!'
+let s:path_run = expand("~/my_workspace/vim/VimVoiceroid/run.bat")
+let s:path_vrx = expand("~/Documents/my_bin/tamiyasu_talk1_30_1/vrx.exe")
+
 
 ""YUKKURI
 ""SofTalkのPATH
 "let g:SofTalk_PATH = 'path'
 "let g:kansikun_PATH = 'path'
-
-let s:path_run = expand("~/my_workspace/vim/VimVoiceroid/test.bat")
-let s:path_vrx = expand("~/Documents/my_bin/tamiyasu_talk1_30_1/vrx.exe")
-
-let s:anko = eval( system( s:path_run . ' ' . s:path_vrx . ' ' . 'こんばんわ' ))
-
-
 
 "#############
 "##Voiceroid##
@@ -25,15 +20,10 @@ let s:anko = eval( system( s:path_run . ' ' . s:path_vrx . ' ' . 'こんばん�
 function! VimVoiceroid#voiceroid(...) abort
     let l:text =''
     for n in range(a:1 , a:2)
-        let l:text =  l:text . getline( n ) . g:A_Voiceroid_Separater
+        let l:text =  l:text . getline( n ) . g:VimVoiceroidSep
     endfor
-    "let l:anko = eval( system(g:tamiyasu_talk_PATH . '\' . g:tamiyasu_talk_EXE . ' ' . l:text ))
-    "call system(g:tamiyasu_talk_PATH . '\vrx.exe' . ' ' . l:text . '')
-    
-    "call system(g:tamiyasu_talk_PATH . '\' . g:tamiyasu_talk_EXE . ' ' . l:text )
-    call system( expand("~/my_workspace/vim/VimVoiceroid/test.bat") . " aaa")
+    eval( system( s:path_run . ' ' . s:path_vrx . ' ' . l:text ))
 
-    "system(g:tamiyasu_talk_PATH . '\vrx.exe' . ' ' . l:text . '')
 endfunction
         
 
