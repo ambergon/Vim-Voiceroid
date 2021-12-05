@@ -1,7 +1,10 @@
 @echo off
+@REM you need write at sjis
+
 
 SETLOCAL ENABLEDELAYEDEXPANSION
 SET LF=^
+
 
 START %1 %2
 ENDLOCAL

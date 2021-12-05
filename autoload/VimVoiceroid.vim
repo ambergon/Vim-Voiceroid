@@ -2,10 +2,12 @@
 
 
 ""settings
-let g:tamiyasu_talk_EXE = 'run.bat'
-let g:VimVoiceroidSep = '!LF!'
-let s:path_run = expand("~/my_workspace/vim/VimVoiceroid/run.bat")
-let s:path_vrx = expand("~/Documents/my_bin/tamiyasu_talk1_30_1/vrx.exe")
+"let g:VimVoiceroid_vrx =
+
+let s:dir = expand('<sfile>:p:h')
+let s:path_run = s:dir . '\run.bat'
+let s:path_vrx = expand( g:VimVoiceroid_vrx )
+let s:VimVoiceroidSep = '!LF!'
 
 
 ""YUKKURI
@@ -20,10 +22,10 @@ let s:path_vrx = expand("~/Documents/my_bin/tamiyasu_talk1_30_1/vrx.exe")
 function! VimVoiceroid#voiceroid(...) abort
     let l:text =''
     for n in range(a:1 , a:2)
-        let l:text =  l:text . getline( n ) . g:VimVoiceroidSep
+        let l:text =  l:text . substitute( getline( n ) ,'"','','g') . s:VimVoiceroidSep
     endfor
+    let l:text = '"' . l:text . '"'
     eval( system( s:path_run . ' ' . s:path_vrx . ' ' . l:text ))
-
 endfunction
         
 
