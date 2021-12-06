@@ -1,0 +1,92 @@
+*VimVoiceroid.txt*	日本語ヘルプ
+
+Version :
+Author  :
+License : MIT license  {{{
+    Permission is hereby granted, free of charge, to any person obtaining
+    a copy of this software and associated documentation files (the
+    "Software"), to deal in the Software without restriction, including
+    without limitation the rights to use, copy, modify, merge, publish,
+    distribute, sublicense, and/or sell copies of the Software, and to
+    permit persons to whom the Software is furnished to do so, subject to
+    the following conditions:
+    The above copyright notice and this permission notice shall be included
+    in all copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+}}}
+
+==============================================================================
+目次						*VimVoiceroid-contents*
+
+概要				|VimVoiceroid-introduction|
+使い方				|VimVoiceroid-usage|
+インターフェイス		|VimVoiceroid-interface|
+  変数				  |VimVoiceroid-variables|
+  コマンド			  |VimVoiceroid-commands|
+  関数				  |VimVoiceroid-functions|
+TODO				|VimVoiceroid-todo|
+更新履歴			|VimVoiceroid-changelog|
+
+
+==============================================================================
+概要						*VimVoiceroid-introduction*
+
+*VimVoiceroid* は
+"http://publish-tool.blogspot.com/"で公開されている民安talkにテキストを投げるプラグインです。
+こちらのプラグインで問題があっても作者様に迷惑をかけないようにお願いいたします。
+
+
+
+最新版:
+https://github.com/user/VimVoiceroid.vim
+
+
+==============================================================================
+使い方						*VimVoiceroid-usage*
+
+
+==============================================================================
+インターフェイス				*VimVoiceroid-interface*
+
+------------------------------------------------------------------------------
+変数						*VimVoiceroid-variables*
+
+g:VimVoiceroid_vrx				*g:VimVoiceroid_vrx*
+
+民安talkの中のvrk.exeまでを指定してください。
+"~/"も問題なく使用できます。
+let g:VimVoiceroid_vrx = "~/yourDirectory/vrx.exe"
+
+------------------------------------------------------------------------------
+コマンド					*VimVoiceroid-commands*
+
+:Voiceroid					*:Voiceroid*
+
+現在カーソルがおかれている行の内容を民安talkに投げます。
+Visual Lineモードで複数行選択している場合は選択行が改行で区切られて渡されます。
+
+
+------------------------------------------------------------------------------
+関数						*VimVoiceroid-functions*
+
+VimVoiceroid#voiceroid({...})			*VimVoiceroid#voiceroid()*
+
+
+==============================================================================
+TODO						*VimVoiceroid-todo*
+
+
+
+==============================================================================
+更新履歴					*VimVoiceroid-changelog*
+
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:
