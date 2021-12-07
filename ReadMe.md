@@ -29,4 +29,5 @@ let g:VimVoiceroid_vrx = "~/Documents/tamiyasu_talk_1_31_0/tamiyasu_talk/vrx.exe
 MIT
 
 ## Author
-[twitter:ambergon](https://twitter.com/Sc_lFoxGon)
+twitter
+[ambergon](https://twitter.com/Sc_lFoxGon)
